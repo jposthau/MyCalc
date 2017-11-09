@@ -14,6 +14,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void calculate(){
+        Button add = (Button) findViewById(R.id.);
+        Button sub = (Button) findViewById(R.id.):
+        Button mult = (Button) findViewById(R.id.);
+        Button div = (Button) findViewById(R.id.);
+        Button sqrt = (Button) findViewById(R.id.);
+        Button pow = (Button) findViewById(R.id.);
+    }
+
     public void add(){
 
     }

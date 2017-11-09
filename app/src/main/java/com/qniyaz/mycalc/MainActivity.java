@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculate(){
-        Button add = (Button) findViewById(R.id.);
-        Button sub = (Button) findViewById(R.id.):
-        Button mult = (Button) findViewById(R.id.);
-        Button div = (Button) findViewById(R.id.);
-        Button sqrt = (Button) findViewById(R.id.);
-        Button pow = (Button) findViewById(R.id.);
+        Button add = (Button) findViewById(R.id.button);
+        Button sub = (Button) findViewById(R.id.button2):
+        Button mult = (Button) findViewById(R.id.button3);
+        Button div = (Button) findViewById(R.id.button4);
+        Button sqrt = (Button) findViewById(R.id.button5);
+        Button pow = (Button) findViewById(R.id.button6);
     }
 
     public void add(){

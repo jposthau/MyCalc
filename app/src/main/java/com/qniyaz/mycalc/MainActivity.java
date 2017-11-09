@@ -4,54 +4,45 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
-    public float result;
-    public String op1;
-    public String op2;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    public void calculate(){
+    public void add(View view) {
+        String answer = "";
         Button add = (Button) findViewById(R.id.button);
-        Button sub = (Button) findViewById(R.id.button2);
-        Button mult = (Button) findViewById(R.id.button3);
-        Button div = (Button) findViewById(R.id.button4);
-        Button sqrt = (Button) findViewById(R.id.button5);
-        Button pow = (Button) findViewById(R.id.button6);
         EditText result = (EditText) findViewById(R.id.editText3);
-
-        if(add.isActivated())
-        {
-            result.setText("It Works!");
-        }
+        result.setText(answer);
     }
-
-    public void add(){
-
+    public void subtract(View view) {
+        Button sub = (Button) findViewById(R.id.button);
+        EditText result = (EditText) findViewById(R.id.editText3);
     }
-
-    public void subtract(){
-
+    public void multiply(View view) {
+        Button mult = (Button) findViewById(R.id.button);
+        EditText result = (EditText) findViewById(R.id.editText3);
     }
-
-    public void multiply(){
-
+    public void divide(View view) {
+        Button div = (Button) findViewById(R.id.button);
+        EditText result = (EditText) findViewById(R.id.editText3);
     }
-
-    public void divide(){
-
+    public void sqrt(View view) {
+        Button sqrt = (Button) findViewById(R.id.button);
+        EditText result = (EditText) findViewById(R.id.editText3);
     }
-
-    public void sqrt(){
-
+    public void pow(View view) {
+        Button pow = (Button) findViewById(R.id.button);
+        EditText result = (EditText) findViewById(R.id.editText3);
     }
-
-    public void pow(){
-
+    public void clear(View view){
+        Button clear = (Button) findViewById(R.id.button7);
+        EditText result = (EditText) findViewById(R.id.editText3);
+        result.setText("Result");
     }
 }

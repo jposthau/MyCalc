@@ -14,46 +14,66 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public int compute(String op){
+        String infixOp = op.trim();
+        InfixToPostfixConverter Converter = new InfixToPostfixConverter();
+        String postfix = Converter.inf2postf(infixOp);
+        PostfixEvaluator Evaluator = new PostfixEvaluator();
+        return(Evaluator.evaluate(postfix.toCharArray()));
+    }
+
     public void add(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
+        int secondOp = compute(((EditText) findViewById(R.id.editText2)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Float.valueOf(opA) + Float.valueOf(opB)));
+        int r = firstOp+secondOp;
+        result.setText(Integer.toString(r));
     }
     public void subtract(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
+        int secondOp = compute(((EditText) findViewById(R.id.editText2)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Float.valueOf(opA) - Float.valueOf(opB)));
+        int r = firstOp-secondOp;
+        result.setText(Integer.toString(r));
     }
     public void multiply(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
+        int secondOp = compute(((EditText) findViewById(R.id.editText2)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Float.valueOf(opA) * Float.valueOf(opB)));
+        int r = firstOp*secondOp;
+        result.setText(Integer.toString(r));
     }
     public void divide(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
+        int secondOp = compute(((EditText) findViewById(R.id.editText2)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Float.valueOf(opA) / Float.valueOf(opB)));
+        if(secondOp != 0) {
+            int r = firstOp / secondOp;
+            result.setText(Integer.toString(r));
+        }
+        else
+            result.setText("Cannot Divide By Zero");
+
     }
     public void sqrt(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Math.sqrt(Float.valueOf(opA))));
+        if(firstOp >= 0) {
+            double r = Math.sqrt(firstOp);
+            result.setText(Double.toString(r));
+        }
+        else
+            result.setText("Cannot sqrt a negative number");
     }
     public void pow(View view) {
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
+        int firstOp = compute(((EditText) findViewById(R.id.editText)).getText().toString());
+        int secondOp = compute(((EditText) findViewById(R.id.editText2)).getText().toString());
         EditText result = (EditText) findViewById(R.id.editText3);
-        result.setText(String.valueOf(Math.pow(Double.valueOf(opA),(Double.valueOf(opB)))));
+        double r = Math.pow(firstOp,secondOp);
+        result.setText(Double.toString(r));
     }
     @SuppressLint("SetTextI18n")
     public void clear(View view){
-        String opA = ((EditText) findViewById(R.id.editText)).getText().toString();
-        String opB = ((EditText) findViewById(R.id.editText2)).getText().toString();
         EditText result = (EditText) findViewById(R.id.editText3);
         result.setText("");
         ((EditText) findViewById(R.id.editText)).setText("");

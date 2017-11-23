@@ -19,7 +19,8 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="17dp" />
 
     <EditText
         android:id="@+id/editText2"
@@ -32,7 +33,8 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="17dp" />
 
     <Button
         android:id="@+id/button"
@@ -44,7 +46,8 @@
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button2"
@@ -56,7 +59,8 @@
         android:text="-"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/editText2"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button3"
@@ -68,7 +72,8 @@
         android:text="x"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/editText2"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button4"
@@ -80,7 +85,8 @@
         android:text="/"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button5"
@@ -92,7 +98,8 @@
         android:text="SQRT"
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
 
     <Button
         android:id="@+id/button6"
@@ -104,30 +111,34 @@
         android:text="POW(A,B)"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="16dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:onClick="clear"
+        android:text="Clear"
+        app:layout_constraintStart_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="8dp" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="45dp"
         android:ems="10"
         android:hint="Result"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:layout_marginLeft="16dp"
         tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="45dp"
-        android:onClick="clear"
-        android:text="Clear"
-        app:layout_constraintStart_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        tools:ignore="HardcodedText" />
 </android.support.constraint.ConstraintLayout>
